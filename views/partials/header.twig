@@ -1,0 +1,72 @@
+<header class="bg-slate-950 border-b border-slate-800">
+	<div class="max-w-7xl mx-auto px-6">
+
+		<div class="flex items-center justify-between h-20">
+
+			<a href="/" class="flex items-center gap-3">
+
+				<div class="h-10 w-10 rounded-lg bg-gradient-to-br from-blue-500 to-violet-600 "></div>
+
+				<span class=" text-xl font-bold text-slate-100 ">
+					Pokelivre
+				</span>
+
+			</a>
+
+			{% if entrepriseLogged %}
+
+				<div class="flex items-center gap-8">
+
+					<p class="text-slate-300">
+						Bienvenue 
+						<span class="font-semibold text-white">
+							{{ entrepriseLogged }}
+						</span>
+					</p>
+
+					<ul class="flex items-center gap-6">
+
+						<li>
+							<a href="/addemploye" class=" text-slate-400 hover:text-blue-400 transition ">
+								Ajouter un employé
+							</a>
+						</li>
+						<li>
+							<a href="/addcomputer" class=" text-slate-400 hover:text-blue-400 transition ">
+								Ajouter un ordinateur
+							</a>
+						</li>
+						<li>
+							<a href="/logout" class=" px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-violet-600 text-white hover:opacity-90 transition">
+								Déconnexion
+							</a>
+						</li>
+
+					</ul>
+
+				</div>
+
+			{% else %}
+
+				<ul class="flex items-center gap-4">
+
+					<li>
+						<a href="/login" class="text-slate-300 hover:text-blue-400 transition ">
+							Connexion
+						</a>
+					</li>
+
+					<li>
+						<a href="/subscribe" class="px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-violet-600 text-white hover:opacity-90 transition ">
+							Inscription
+						</a>
+					</li>
+
+				</ul>
+
+			{% endif %}
+
+		</div>
+
+	</div>
+</header>
